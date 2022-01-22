@@ -12,11 +12,13 @@ class Game:
     def __init__(self):
         # init Pygame
         pygame.init()
-        self.size = (1200, 800)
+        self.size = (1000, 700)
         self.screen = pygame.display.set_mode(self.size)
         self.keyboard_handler = KeyboardHandler()
         '''self.font = pygame.font.SysFont(pygame.font.get_fonts()[0], 64)'''
         self.time = pygame.time.get_ticks()
+
+        self.Player1 = Player(0, 0)
 
     """
     Method 'game_loop' will be executed every frame to drive
@@ -47,6 +49,7 @@ class Game:
     """
     def draw_components(self):
         self.screen.fill([255, 255, 255])
+        self.Player1.draw(self.screen)
         '''self.game_view.draw_game()'''
         pygame.display.flip()
 
