@@ -6,7 +6,7 @@ class Player:
     def __init__(self, pos_x, pos_y):
         self.pos_x = pos_x
         self.pos_y = pos_y
-        self.color = (255, 0, 0)
+        self.color = (0)
         self.step_size = 10
         self.size = 40
 
